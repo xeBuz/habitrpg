@@ -43,7 +43,7 @@ function($scope, $rootScope, User, $http, Notification, ApiUrl) {
     if (!window.env.IS_MOBILE) {
       // Add This
       //$.getScript("//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5016f6cc44ad68a4"); //FIXME why isn't this working when here? instead it's now in <head>
-      var addthisServices = 'facebook,twitter,googleplus,tumblr,'+window.env.BASE_URL.replace('https://','').replace('http://','');
+      var addthisServices = 'facebook,twitter,google_plusone_share,tumblr,pinterest_share,'+window.env.BASE_URL.replace('https://','').replace('http://','');
       window.addthis_config = {
         ui_click: true,
         services_custom:{

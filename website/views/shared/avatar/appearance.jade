@@ -1,8 +1,9 @@
 mixin avatar(opts)
   .character-sprites
-    .addthis_native_toolbox(ng-if='::profile._id==user._id',
-      data-url="#{env.BASE_URL}/static/front/#?memberId={{::profile._id}}",
-      data-title="Check out my HabitRPG progress!")
+    div(data-addthis-toolbox class='addthis_native_toolbox', ng-if='profile._id==user._id',
+      data-url="#{env.BASE_URL}/static/front/#?memberId={{profile._id}}",
+      data-title="Check out my HabitRPG progress!",
+      data-description="HabitRPG, the app that treats your life like a game")
 
     // Mount Body
     if !opts.minimal
