@@ -5,13 +5,13 @@
 
 angular
   .module('habitrpg')
-  .directive('addthisToolbox', addthisToolbox);
+  .directive('shareSocial', shareSocial);
 
-addthisToolbox.$inject = [
+shareSocial.$inject = [
   '$timeout'
 ];
 
-function addthisToolbox($timeout) {
+function shareSocial($timeout) {
   return {
     restrict: 'A',
     transclude: true,
@@ -27,4 +27,4 @@ function addthisToolbox($timeout) {
         });
       });
     }
-}};
+}}
