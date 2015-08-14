@@ -1007,19 +1007,21 @@ api.spells =
 
 api.cardTypes =
   greeting:
-    key: 'greeting'
     messageOptions: 4
     yearRound: true
   nye:
-    key: 'nye'
     messageOptions: 5
   thankyou:
-    key: 'thankyou'
     messageOptions: 4
     yearRound: true
   valentine:
-    key: 'valentine'
     messageOptions: 4
+
+_.each api.cardTypes, (type,key) ->
+  _.defaults type,
+    key: key
+    achievementTitle: t(key + 'CardAchievementTitle')
+    achievementText: t(key + 'CardAchievementText', {cards:null})
 
 # Intercept all spells to reduce user.stats.mp after casting the spell
 _.each api.spells, (spellClass) ->
